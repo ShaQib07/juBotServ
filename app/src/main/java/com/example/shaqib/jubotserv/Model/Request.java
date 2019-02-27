@@ -6,27 +6,17 @@ public class Request {
     private String phone;
     private String name;
     private String address;
+    private String comment;
     private String total;
     private String dateAndTime;
     private String status;
     private List<Order> foods;
 
-    public Request() {
-    }
-
-    public Request(String phone, String name, String address, String total, String dateAndTime, List<Order> foods) {
+    public Request(String phone, String name, String address, String comment, String total, String dateAndTime, String status, List<Order> foods) {
         this.phone = phone;
         this.name = name;
         this.address = address;
-        this.total = total;
-        this.dateAndTime = dateAndTime;
-        this.foods = foods;
-    }
-
-    public Request(String phone, String name, String address, String total, String dateAndTime, String status, List<Order> foods) {
-        this.phone = phone;
-        this.name = name;
-        this.address = address;
+        this.comment = comment;
         this.total = total;
         this.dateAndTime = dateAndTime;
         this.status = status;
@@ -87,5 +77,16 @@ public class Request {
 
     public void setFoods(List<Order> foods) {
         this.foods = foods;
+    }
+
+    public Request() {
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getComment() {
+        return comment;
     }
 }

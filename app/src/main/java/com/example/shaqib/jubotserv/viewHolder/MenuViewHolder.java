@@ -12,7 +12,7 @@ import com.example.shaqib.jubotserv.interfacee.ItemClickListener;
 
 public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
 
-    public TextView mName, mPhone, mAddress,mDandT, mTotal;
+    public TextView mName, mPhone, mAddress, mComment, mDandT, mTotal;
     public Button btn;
     private ItemClickListener itemClickListener;
 
@@ -22,6 +22,7 @@ public class MenuViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         mName = itemView.findViewById(R.id.name);
         mPhone = itemView.findViewById(R.id.phone);
         mAddress = itemView.findViewById(R.id.address);
+        mComment = itemView.findViewById(R.id.comment);
         mDandT = itemView.findViewById(R.id.dAndT);
         mTotal = itemView.findViewById(R.id.total);
 

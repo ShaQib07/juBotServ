@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 holder.mName.setText(model.getName());
                 holder.mPhone.setText(model.getPhone());
                 holder.mAddress.setText(model.getAddress());
+                holder.mComment.setText(model.getComment());
                 holder.mDandT.setText(model.getDateAndTime());
                 holder.mTotal.setText(model.getTotal());
 
@@ -72,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
                         if (model.getStatus().equals("Pending")){
                             holder.btn.setBackgroundColor(getColor(R.color.light_green));
                             holder.btn.setText("Done");
-                            Request currentRequest = new Request(model.getPhone(),model.getName(),model.getAddress(),model.getTotal(),model.getDateAndTime(),"Done",model.getFoods());
+                            Request currentRequest = new Request(model.getPhone(),model.getName(),model.getAddress(),model.getComment(),model.getTotal(),model.getDateAndTime(),"Done",model.getFoods());
                             request.child(adapter.getRef(position).getKey()).setValue(currentRequest);
                         } else {
                             holder.btn.setBackgroundColor(getColor(R.color.signup));
                             holder.btn.setText("Pending");
-                            Request currentRequest = new Request(model.getPhone(),model.getName(),model.getAddress(),model.getTotal(),model.getDateAndTime(),"Pending",model.getFoods());
+                            Request currentRequest = new Request(model.getPhone(),model.getName(),model.getAddress(),model.getComment(),model.getTotal(),model.getDateAndTime(),"Pending",model.getFoods());
                             request.child(adapter.getRef(position).getKey()).setValue(currentRequest);
                         }
                     }
